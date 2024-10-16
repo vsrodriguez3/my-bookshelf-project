@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bookshelf</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <i class="fas fa-book" id="book-icon"></i>
+    <h1>My Bookshelf</h1>
+    <hr />
+    <p id="message"></p>
+    <hr />
+
+    <!-- Login/Register Section -->
+    <div id="logon-register" style="display: none">
+      <button type="button" id="logon">Login</button>
+      <button type="button" id="register">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="logon-div" style="display: none">
+      <form>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" />
+        </div>
+        <button type="button" id="logon-button">Login</button>
+        <button type="button" id="logon-cancel">Cancel</button>
+      </form>
+    </div>
+
+    <!-- Register Form -->
+    <div id="register-div" style="display: none">
+      <form>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="email1">Email:</label>
+          <input type="email" id="email1" />
+        </div>
+        <div>
+          <label for="password1">Password:</label>
+          <input type="password" id="password1" />
+        </div>
+        <div>
+          <label for="password2">Verify Password:</label>
+          <input type="password" id="password2" />
+        </div>
+        <button type="button" id="register-button">Register</button>
+        <button type="button" id="register-cancel">Cancel</button>
+      </form>
+    </div>
+
+    <!-- Reviews Section -->
+    <div id="reviews" style="display: none">
+      <p id="reviews-message"></p>
+      <table id="reviews-table">
+        <tr id="reviews-table-header">
+          <th>Title</th>
+          <th>Review</th>
+          <th>Rating</th>
+          <th colspan="3"></th>
+        </tr>
+      </table>
+      <button type="button" id="add-review">Add Review</button>
+      <button type="button" id="logoff">Log Out</button>
+    </div>
+
+    <!-- Edit/Add Review Form -->
+    <div id="edit-review" style="display: none">
+      <form>
+        <div>
+          <label for="bookTitle">Title:</label>
+          <input type="text" id="bookTitle" />
+        </div>
+        <div>
+          <label for="reviewText">Review:</label>
+          <textarea id="reviewText"></textarea>
+        </div>
+        <div>
+          <label for="rating">Rating:</label>
+          <select id="rating">
+            <option value="1">1 star</option>
+            <option value="2">2 stars</option>
+            <option value="3">3 stars</option>
+            <option value="4">4 stars</option>
+            <option value="5">5 stars</option>
+          </select>
+        </div>
+        <button type="button" id="adding-review">Add</button>
+        <!-- Updated button ID for adding reviews -->
+        <button type="button" id="edit-cancel">Cancel</button>
+      </form>
+    </div>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
